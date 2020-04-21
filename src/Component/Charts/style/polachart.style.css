@@ -1,3 +1,16 @@
-
+.chart-container-pie {
+  width: 40vw;
+  height: 22vw;
+  overflow-y: hidden;
+}
+.chart-container-pie .chart-pie {
+  position: relative;
+  width: 39vw;
+  height: 22vw;
+  padding-bottom: 2vw;
+  padding-right: 2vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 /*# sourceMappingURL=polachart.style.css.map */

@@ -1,3 +1,15 @@
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-top: 1px dotted red;
+  border-bottom: 1px dotted red;
+}
 
+.chart-container > * {
+  flex-grow: 1;
+}
 
 /*# sourceMappingURL=homepagechatcontainer.style.css.map */

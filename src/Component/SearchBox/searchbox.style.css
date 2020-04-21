@@ -1,3 +1,11 @@
-
+.searchBoxContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60vh;
+  margin-left: 10px;
+}
+.searchBoxContainer .search-field {
+  border-radius: 20px;
+}
 
 /*# sourceMappingURL=searchbox.style.css.map */

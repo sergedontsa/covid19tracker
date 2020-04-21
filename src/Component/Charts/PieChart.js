@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import { Pie} from "react-chartjs-2";
+import {Doughnut} from "react-chartjs-2";
 import Card from "react-bootstrap/Card";
 import './style/polachart.style.scss'
 
-class PolarChart extends Component{
+class PieChart extends Component{
     constructor() {
         super();
         this.state = {
@@ -53,25 +53,26 @@ class PolarChart extends Component{
     render() {
 
         return(
-            <div className="chart-container">
-                <Card className="card">
-                    <Card.Body>
-                        <Card.Title>Title</Card.Title>
-                        <Card.Text>
-                            <Pie data={this.state.DataChart} options={{
-                                responsive: true,
-                                maintainAspectRatio: true,
-                                hover: true,
 
-                            }}
+                <Card className="chart-container-pie">
+                    <Card.Body>
+                        <Card.Title>Pie</Card.Title>
+                        <Card.Text>
+                            <div className="chart-pie">
+                            <Doughnut  data={this.state.DataChart} options={{
+                                hover: true,
+                                maintainAspectRatio: true,
+
+                           }}
                             />
+                            </div>
                         </Card.Text>
+
                     </Card.Body>
                 </Card>
 
-            </div>
         )
     }
 
 }
-export default PolarChart
+export default PieChart

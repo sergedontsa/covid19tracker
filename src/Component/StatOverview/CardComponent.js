@@ -1,12 +1,21 @@
-import React, {Component} from "react";
+import React from "react";
 import CountUp from "react-countup";
+import Card from "react-bootstrap/Card";
+import './Style/cardcomponent.style.scss'
 
-export default class CardComponent extends Component{
-    render() {
-        return(
+const CardComponent = ({end, title})=>(
+
             <div>
-                <CountUp end={1000}/>
+                <Card className="card">
+                    <Card.Header>
+                        <Card.Title>{title}</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text>
+                            <CountUp  separator=" " end={end}/>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
             </div>
-        )
-    }
-}
+)
+export default CardComponent
