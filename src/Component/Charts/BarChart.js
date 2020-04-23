@@ -12,7 +12,7 @@ export default class BarChart extends Component{
         }
     }
     componentDidMount() {
-        fetch('https://corona.lmao.ninja/v2/historical/all/').then(response => response.json())
+        fetch('https://corona.lmao.ninja/v2/historical/all?lastdays=45').then(response => response.json())
             .then(object => {
                 let casesObject = object.cases;
                 let deathsObject = object.deaths;
@@ -63,10 +63,10 @@ export default class BarChart extends Component{
 
                 <Card className="chart-container-bar">
                     <Card.Body>
-                        <Card.Title>Bar</Card.Title>
-                        <Card.Text>
-                            <div className="chart-bar">
+                        <Card.Text className="chart-bar">
+
                             <Bar data={this.state.data} options={{
+                                responsive: true,
                                 hover: true,
                                 aspectRatio: 1,
                                 maintainAspectRatio: false,
@@ -79,7 +79,7 @@ export default class BarChart extends Component{
                                     }
                                 }
                            }}/>
-                            </div>
+
                         </Card.Text>
                     </Card.Body>
                 </Card>

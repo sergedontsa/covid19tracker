@@ -1,9 +1,9 @@
 .navbar-container {
   border-bottom: 1px dotted;
+  min-height: 10vh;
 }
 .navbar-container .nav-item {
-  font-weight: bold;
-  color: black;
+  color: white;
 }
 
 /*# sourceMappingURL=heade.style.css.map */

@@ -2,15 +2,21 @@
   width: 40vw;
   height: 22vw;
   overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dceada;
 }
 .chart-container-pie .chart-pie {
   position: relative;
-  width: 39vw;
-  height: 22vw;
-  padding-bottom: 2vw;
-  padding-right: 2vw;
+  width: 38vw;
+  height: 20vw;
+  padding: 0 1vw;
   overflow-x: hidden;
   overflow-y: hidden;
+  align-self: center;
+  border: 0.4px dotted #dceada;
 }
 
 /*# sourceMappingURL=polachart.style.css.map */

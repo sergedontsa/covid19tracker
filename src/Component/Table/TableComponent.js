@@ -64,7 +64,7 @@ export default class TableComponent extends Component{
                 <SearchBox handleChange={this.handleSearBox} placeholder="Search by Country"/>
             <div style={{height: "50vh", overflowY: "auto"}}>
 
-                <Table style={{overflowY: "auto"}} striped bordered responsive={true}  hover>
+                <Table style={{overflowY: "auto"}} striped bordered responsive={true} size="sm"  hover>
                     <thead>
                         <tr>
                             <th>{tableHeader.countryInfo.iso}</th>

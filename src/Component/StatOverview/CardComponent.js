@@ -6,13 +6,13 @@ import './Style/cardcomponent.style.scss'
 const CardComponent = ({end, title})=>(
 
             <div>
-                <Card className="card">
+                <Card className="card-stat">
                     <Card.Header>
-                        <Card.Title>{title}</Card.Title>
+                        <Card.Title className="num-title">{title}</Card.Title>
                     </Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <CountUp  separator=" " end={end}/>
+                            <CountUp className="number"   separator=" " end={end}/>
                         </Card.Text>
                     </Card.Body>
                 </Card>

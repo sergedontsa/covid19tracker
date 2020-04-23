@@ -1,0 +1,16 @@
+.chart-container-continent {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto;
+  border-bottom: 2vw;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-bottom: 10px;
+  overflow-y: hidden;
+}
+
+.chart-container-continent > * {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=contient.style.css.map */

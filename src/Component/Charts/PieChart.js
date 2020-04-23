@@ -9,6 +9,7 @@ class PieChart extends Component{
         this.state = {
             data:{},
             DataChart:{
+                labels: [],
                  datasets: [
                     {
                         label: [],
@@ -54,18 +55,17 @@ class PieChart extends Component{
 
         return(
 
-                <Card className="chart-container-pie">
+                <Card bg="Light" variant="Light" className="chart-container-pie">
                     <Card.Body>
-                        <Card.Title>Pie</Card.Title>
-                        <Card.Text>
-                            <div className="chart-pie">
-                            <Doughnut  data={this.state.DataChart} options={{
+                            <Card.Text className="chart-pie">
+
+                            <Doughnut data={this.state.DataChart} options={{
                                 hover: true,
                                 maintainAspectRatio: true,
 
                            }}
                             />
-                            </div>
+
                         </Card.Text>
 
                     </Card.Body>

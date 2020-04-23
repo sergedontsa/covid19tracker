@@ -2,16 +2,21 @@
   width: 60vw;
   height: 22vw;
   overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chart-bar {
   position: relative;
-  width: 59vw;
-  height: 22vw;
-  padding-bottom: 2vw;
-  padding-right: 2vw;
+  width: 58vw;
+  height: 20vw;
+  padding: 0 1vw;
   overflow-x: hidden;
   overflow-y: hidden;
+  align-self: center;
+  border: 0.4px dotted #dceada;
 }
 
 /*# sourceMappingURL=barchart.style.css.map */

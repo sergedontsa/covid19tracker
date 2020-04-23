@@ -1,0 +1,37 @@
+.el {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.el .el-i {
+  align-self: flex-start;
+}
+.el .el-j {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 1.05em;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.el > * {
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.card-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+/*# sourceMappingURL=continent.pie.style.css.map */
