@@ -40,7 +40,7 @@ class PieChart extends Component{
                             {
                                 fontColor:'black',
                                 data:data,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#EB3434",  "#1F7D29", "#F5E942", "#FF9E9E",]
                             }
                         ]
 

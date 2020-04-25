@@ -12,6 +12,7 @@ function App() {
         <Header/>
         <Switch>
             <Route path="/" exact={true} component={HomePage}/>
+            <Route path="/covid19tracker" component={HomePage}/>
             <Route path="/news" exact={true} component={NewsPage}/>
             <Route path="/about" exact={true} component={AboutPage}/>
         </Switch>

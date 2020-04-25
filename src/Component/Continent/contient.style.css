@@ -5,8 +5,9 @@
   border-bottom: 2vw;
   box-sizing: border-box;
   justify-content: center;
-  padding-bottom: 10px;
   overflow-y: hidden;
+  max-width: 100%;
+  padding: 1vw;
 }
 
 .chart-container-continent > * {

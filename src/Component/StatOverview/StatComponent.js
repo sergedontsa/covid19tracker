@@ -18,7 +18,7 @@ export default class StatComponent extends Component{
 
         }
     }
-    componentDidMount() {
+  componentDidMount() {
         fetch('https://corona.lmao.ninja/v2/all')
             .then(response => response.json())
             .then(object => {

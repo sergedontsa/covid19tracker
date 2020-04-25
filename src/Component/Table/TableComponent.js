@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Table from "react-bootstrap/Table";
 import TableRow from "./TableRow/TableRow";
 import {SearchBox} from "../SearchBox/SearchBox";
+import Card from "react-bootstrap/Card";
 
 
 export default class TableComponent extends Component{
@@ -37,7 +38,7 @@ export default class TableComponent extends Component{
     }
 
     componentDidMount() {
-        fetch('https://corona.lmao.ninja/v2/countries?yesterday=&sort=cases')
+        fetch('https://corona.lmao.ninja/v2/countries?sort=cases')
             .then(response => response.json())
             .then(object => {
                 let obj = []
@@ -61,8 +62,10 @@ export default class TableComponent extends Component{
         const filterRowObject = rowObject.filter(object => object.country.toLowerCase().includes(searchField.toLowerCase()))
         return(
             <div>
+                <Card style={{padding: "20px"}}>
                 <SearchBox handleChange={this.handleSearBox} placeholder="Search by Country"/>
-            <div style={{height: "50vh", overflowY: "auto"}}>
+
+                <div style={{height: "50vh", overflowY: "auto"}}>
 
                 <Table style={{overflowY: "auto"}} striped bordered responsive={true} size="sm"  hover>
                     <thead>
@@ -91,6 +94,7 @@ export default class TableComponent extends Component{
                     </tbody>
                 </Table>
             </div>
+                </Card>
             </div>
         )
     }

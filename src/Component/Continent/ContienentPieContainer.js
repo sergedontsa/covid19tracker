@@ -2,8 +2,6 @@ import React, {Component} from "react";
 import PieChatForContinent from "./PieChatForContinent";
 import './contient.style.scss'
 
-
-
 export default class ContinentPieContainer extends Component{
 
     constructor() {
@@ -26,16 +24,17 @@ export default class ContinentPieContainer extends Component{
     }
 
     componentDidMount() {
-        fetch('https://corona.lmao.ninja/v2/continents?yesterday=true')
+        fetch('https://corona.lmao.ninja/v2/continents')
             .then(response => response.json())
             .then(object =>{
-                let europeObject = object.filter(o => o.continent === 'Europe')
-                let africaObject = object.filter(o => o.continent === 'Africa')
-                let northAmericaObject = object.filter(o => o.continent === 'North America')
-                let asiaObject = object.filter(o => o.continent === 'Asia')
-                let southAmericaObject = object.filter(o => o.continent === 'outh America')
-                let oceaniaObject = object.filter(o => o.continent === 'Oceania')
-                let label = ["Cases", "Today's Cases", 'Deaths', "Today's Deaths", 'Recovered', 'Active', "Critical"]
+                let europeObject = object.filter(o => o.continent === "Europe")
+                let africaObject = object.filter(o => o.continent === "Africa")
+                let northAmericaObject = object.filter(o => o.continent === "North America")
+                let asiaObject = object.filter(o => o.continent === "Asia")
+                let southAmericaObject = object.filter(o => o.continent === "South America")
+                let oceaniaObject = object.filter(o => o.continent === "Oceania")
+
+
 
                 let europe_data = []
                 let africa_data = []
@@ -44,14 +43,11 @@ export default class ContinentPieContainer extends Component{
                 let south_america = []
                 let oceania_data = []
 
+                console.log("EUROPE")
+                console.log(europeObject[0])
+
                 try{
-                    europe_data.push(europeObject[0].cases)
-                    europe_data.push(europeObject[0].todayCases)
-                    europe_data.push(europeObject[0].deaths)
-                    europe_data.push(europeObject[0].todayDeaths)
-                    europe_data.push(europeObject[0].recovered)
-                    europe_data.push(europeObject[0].active)
-                    europe_data.push(europeObject[0].critical)
+
 
                     africa_data.push(africaObject[0].cases)
                     africa_data.push(africaObject[0].todayCases)
@@ -60,6 +56,15 @@ export default class ContinentPieContainer extends Component{
                     africa_data.push(africaObject[0].recovered)
                     africa_data.push(africaObject[0].active)
                     africa_data.push(africaObject[0].critical)
+
+                    europe_data.push(europeObject[0].cases)
+                    europe_data.push(europeObject[0].todayCases)
+                    europe_data.push(europeObject[0].deaths)
+                    europe_data.push(europeObject[0].todayDeaths)
+                    europe_data.push(europeObject[0].recovered)
+                    europe_data.push(europeObject[0].active)
+                    europe_data.push(europeObject[0].critical)
+
 
                     north_america.push(northAmericaObject[0].cases)
                     north_america.push(northAmericaObject[0].todayCases)
@@ -93,17 +98,21 @@ export default class ContinentPieContainer extends Component{
                     oceania_data.push(oceaniaObject[0].active)
                     oceania_data.push(oceaniaObject[0].critical)
 
+
+
                 }catch (e) {
-                    console.log("The following error occured: " + e)
+                    console.log("The following error ocured: " + e)
 
                 }
+                let label = ["Cases", "Today's Cases", 'Deaths', "Today's Deaths", 'Recovered', 'Active', "Critical"]
                 this.setState({
                     europeDataSet:{
                         labels: label,
                         datasets: [
                             {
                                 data:europe_data,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
+
                             }
                         ]
                     },
@@ -113,7 +122,7 @@ export default class ContinentPieContainer extends Component{
                         datasets: [
                             {
                                 data:africa_data,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
                             }
                         ]
                     },
@@ -123,7 +132,7 @@ export default class ContinentPieContainer extends Component{
                             {
 
                                 data:north_america,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
                             }
                         ]
                     },
@@ -133,7 +142,7 @@ export default class ContinentPieContainer extends Component{
                             {
 
                                 data:asia_data,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
                             }
                         ]
                     },
@@ -143,7 +152,7 @@ export default class ContinentPieContainer extends Component{
                             {
 
                                 data:south_america,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
                             }
                         ]
                     },
@@ -153,7 +162,7 @@ export default class ContinentPieContainer extends Component{
                             {
 
                                 data:oceania_data,
-                                backgroundColor: ["#eba434", "#eb3434","#1f7d29", '#7d591f', '#7d1f1f','#7d591f', '#7d1f1f']
+                                backgroundColor:["#EBA434", "#F5E942", "#EB3434", "#FF9E9E", "#1F7D29", "#7D591F", "#AB165E"]
                             }
                         ]
                     },
@@ -167,7 +176,10 @@ export default class ContinentPieContainer extends Component{
 
 
                 })
+
+                console.log(south_america)
             }).catch(e => console.log(e))
+
     }
 
     render() {

@@ -1,3 +1,27 @@
+.continent-pie-wrapper-wrapper{
+  width: 9vw;
+  margin: auto 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.22);
+
+  .card{
+    border-radius: 0;
+  }
+}
+
+.continent-pie-wrapper{
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  align-self: center;
+  margin: 0;
+
+
+}
+
 .el {
   display: flex;
   flex-direction: row;
@@ -11,6 +35,12 @@
 
   .el-i{
     align-self: flex-start;
+
+    .img-legend{
+      width: 2vw;
+      height: 0.5vw;
+      margin-right: 5px;
+    }
 
 
   }
@@ -34,3 +64,35 @@
   text-align: center;
   font-size: 1.05em;
 }
+
+.list-el{
+  height: 40px;
+}
+
+
+//.chart-container-pie {
+//  width: 40vw;
+//  height: 22vw;
+//  overflow-y: hidden;
+//  overflow-x: hidden;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  background-color: #dceada;
+//
+//
+//
+//  .chart-pie{
+//    position: relative;
+//    width: 38vw;
+//    height: 20vw;
+//    padding: 0 1vw;
+//    overflow-x: hidden;
+//    overflow-y: hidden;
+//    align-self: center;
+//    border: 0.4px dotted  #dceada;
+//  }
+//
+//
+//}
+

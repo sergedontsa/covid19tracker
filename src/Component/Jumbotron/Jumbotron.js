@@ -7,7 +7,7 @@ class JumbotronComponent extends Component{
     render() {
         return(
 
-                <div className="jumbotron container-fluid">
+                <div className="jumbotron-content">
 
                 <StatComponent/>
                 </div>

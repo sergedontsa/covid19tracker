@@ -1,3 +1,24 @@
+.continent-pie-wrapper-wrapper {
+  width: 9vw;
+  margin: auto 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22);
+}
+.continent-pie-wrapper-wrapper .card {
+  border-radius: 0;
+}
+
+.continent-pie-wrapper {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  align-self: center;
+  margin: 0;
+}
+
 .el {
   display: flex;
   flex-direction: row;
@@ -11,6 +32,11 @@
 }
 .el .el-i {
   align-self: flex-start;
+}
+.el .el-i .img-legend {
+  width: 2vw;
+  height: 0.5vw;
+  margin-right: 5px;
 }
 .el .el-j {
   display: flex;
@@ -32,6 +58,10 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 1.05em;
+}
+
+.list-el {
+  height: 40px;
 }
 
 /*# sourceMappingURL=continent.pie.style.css.map */
