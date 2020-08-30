@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import { Map, TileLayer, Marker, Popup } from
 import {Map, TileLayer, Marker, Popup} from "react-leaflet";
 
 
@@ -28,7 +27,7 @@ export default class WorldMap extends Component<> {
                     </Popup>
                 </Marker>
             </Map>
-            </div>
+             </div>
         )
     }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {Pie} from "react-chartjs-2";
+import {Doughnut} from "react-chartjs-2";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import './continent.pie.style.scss'
@@ -23,7 +23,7 @@ const PieChatForContinent = ({
             <Card.Header className="card-title">{title}</Card.Header>
             <Card.Body >
                 <div className="continent-pie-wrapper">
-                <Pie data={data} options={{
+                <Doughnut data={data} options={{
                     responsive:true,
                     maintainAspectRatio:false,
                     legend: {

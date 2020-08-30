@@ -27,12 +27,12 @@ export default class ContinentPieContainer extends Component{
         fetch('https://corona.lmao.ninja/v2/continents')
             .then(response => response.json())
             .then(object =>{
-                let europeObject = object.filter(o => o.continent === "Europe")
-                let africaObject = object.filter(o => o.continent === "Africa")
-                let northAmericaObject = object.filter(o => o.continent === "North America")
+                let europeObject = object.filter(o => o.continent.includes("Europe"))
+                let africaObject = object.filter(o => o.continent.includes("Africa"))
+                let northAmericaObject = object.filter(o => o.continent.includes("North America"))
                 let asiaObject = object.filter(o => o.continent === "Asia")
-                let southAmericaObject = object.filter(o => o.continent === "South America")
-                let oceaniaObject = object.filter(o => o.continent === "Oceania")
+                let southAmericaObject = object.filter(o => o.continent.includes("South America"))
+                let oceaniaObject = object.filter(o => o.continent.includes("Oceania"))
 
 
 
